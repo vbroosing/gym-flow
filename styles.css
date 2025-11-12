@@ -1,0 +1,75 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  margin-top: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  background: #333;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  display: block;
+}
+
+input, select, button {
+  width: 100%;
+  padding: 8px;
+  margin: 5px 0;
+  box-sizing: border-box;
+}
+
+.notifications {
+  background: #e74c3c;
+  color: white;
+  padding: 10px;
+  border-radius: 4px;
+  margin-top: 10px;
+}
+
+.btn_container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+/* ... (estilos anteriores) ... */
+
+.exercise-item {
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+}
+
+.exercise-item h3 {
+  margin: 0 0 5px 0;
+}
+
+.exercise-item p {
+  margin: 5px 0;
+  color: #666;
+}

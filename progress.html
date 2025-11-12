@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Progreso - GymFlow</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="dashboard.html">Inicio</a></li>
+      <li><a href="routines.html">Rutinas</a></li>
+      <li><a href="exercises.html">Ejercicios</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <h1>Seguimiento de Progreso</h1>
+    <form id="progressForm">
+
+      <label for="name">Nombre:</label>
+      <input type="text" id="name" required>
+
+      <label for="date">Fecha:</label>
+      <input type="date" id="date" required>
+
+      <label for="weight">Peso (kg):</label>
+      <input type="number" id="weight" step="0.1" required>
+
+      <label for="reps">Repeticiones:</label>
+      <input type="number" id="reps">
+
+      <label for="sets">Series:</label>
+      <input type="number" id="sets">
+
+      <button type="submit">Guardar Progreso</button>
+    </form>
+
+    <div id="progressDisplay">
+      <!-- Aquí se mostrará el historial -->
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

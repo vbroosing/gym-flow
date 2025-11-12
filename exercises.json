@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "name": "Sentadilla",
+    "group": "Piernas",
+    "machine": "Barra",
+    "video": "https://www.youtube.com/watch?v=video1"
+  },
+  {
+    "id": 2,
+    "name": "Press de banca",
+    "group": "Pecho",
+    "machine": "Banco",
+    "video": "https://www.youtube.com/watch?v=video2"
+  }
+]
