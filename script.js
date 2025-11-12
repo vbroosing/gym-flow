@@ -12,9 +12,9 @@ async function loadExercises() {
     console.error("Error al cargar ejercicios:", e);
     // Datos de respaldo si no se puede cargar el JSON
     return [
-      {"id": 1,"name": "Sentadilla","group": "Piernas","machine": "Barra","video": "#"},
-      {"id": 2,"name": "Press de banca","group": "Pecho","machine": "Banco","video": "#"},
-      {"id": 3,"name": "Remo con barra","group": "Espalda","machine": "Barra","video": "#"},
+      {"id": 1,"name": "Sentadilla","group": "Piernas","machine": "Barra","video": "OXH-ecu-Obw?"},
+      {"id": 2,"name": "Press de banca","group": "Pecho","machine": "Banco","video": "OXH-ecu-Obw"},
+      {"id": 3,"name": "Remo con barra","group": "Espalda","machine": "Barra","video": "OXH-ecu-Obw"},
       {"id": 4,"name": "Flexiones","group": "Pecho","machine": "Peso corporal","video": "#"},
       {"id": 5,"name": "Zancadas","group": "Piernas","machine": "Peso corporal","video": "#"}
     ];
@@ -102,10 +102,15 @@ function renderRoutine(routine) {
     <h3>Tu Rutina Personalizada</h3>
     <ul>
       ${routine.map(e => `
-        <li>
-          <strong>${e.name}</strong> (${e.group}) - ${e.sets} series x ${e.reps} repeticiones
-          <a href="${e.video}" target="_blank">Ver video</a>
-        </li>
+        <center>
+          <li>
+            <strong>${e.name}</strong> (${e.group}) - ${e.sets} series x ${e.reps} repeticiones
+            <hr>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/${e.video}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <hr>
+            <a href="${e.video}" target="_blank">Ver video</a>
+          </li>
+        </center>
       `).join('')}
     </ul>
   `;
@@ -165,7 +170,7 @@ window.addEventListener('load', () => {
     // Simular notificación si hay progreso registrado
     const progress = JSON.parse(localStorage.getItem(progressKey) || '[]');
     if (progress.length >= 2) {
-      notifications.innerHTML = '<p>¡Felicidades! Has completado 2 días de entrenamiento. ¡Sigue así!</p>';
+      notifications.innerHTML = '<p>¡Felicidades! Has completado ' + progress.length + ' días de entrenamiento. ¡Sigue así!</p>';
     }
   }
 });
